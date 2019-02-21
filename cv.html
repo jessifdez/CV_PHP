@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Editar CV</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h3>Editor de CV</h3>
+            <form action="insertar_datos.php" method="POST">
+                Epígrafe:
+                <select name="epigrafe" class="custom-select">
+                    <option selected>Seleccione epigrafe</option>
+                    <option value="Datos personales">Datos personales</option>
+                    <option value="Formacion">Formación académica</option>
+                    <option value="Experiencia">Experiencia profesional</option>
+                    <option value="Cursos e Idiomas">Cursos e Idiomas</option>
+                    <option value="Otros datos">Otros datos</option>
+                </select>
+                </br>
+                </br>
+             
+                <div class="form-group">
+                    <label for="texto">Texto:</label>
+                    <textarea class="form-control" id="texto" name="texto" rows="5"></textarea>
+                </div>
+                <br><br>
+                <input type="hidden" name="accion" value="guardar"/>
+                <input type="submit" class="btn btn-info" value="Guardar datos"/>
+                <br><br>
+            </form>
+            <form action="mostrar_cv.php" method="POST">
+                <input type="hidden" name="accion" value="mostrar"/>
+                <input type="submit" class="btn btn-danger" value="Mostrar CV"/>
+            </form>
+        </div>
+        
+    </body>                       
+</html>
